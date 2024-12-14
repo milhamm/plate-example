@@ -15,6 +15,7 @@
     "@react-router/node": "^7.0.2",
     "@react-router/serve": "^7.0.2",
     "@udecode/cn": "^40.2.8",
+    "@udecode/plate-alignment": "^40.0.0",
     "@udecode/plate-basic-marks": "^40.0.0",
     "@udecode/plate-block-quote": "^40.0.0",
     "@udecode/plate-common": "^40.3.1",

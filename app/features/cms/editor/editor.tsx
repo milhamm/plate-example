@@ -2,6 +2,7 @@ import {
   usePlateEditor,
   Plate,
   PlateContent,
+  ParagraphPlugin,
 } from "@udecode/plate-common/react";
 import type { Value } from "@udecode/plate-common";
 import {
@@ -12,7 +13,8 @@ import {
 import { HEADING_KEYS } from "@udecode/plate-heading";
 import { HeadingPlugin } from "@udecode/plate-heading/react";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
-import { Divider } from "@chakra-ui/react";
+import { AlignPlugin } from "@udecode/plate-alignment/react";
+import { Box, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
 import {
@@ -22,6 +24,7 @@ import {
   HeadingThreeElement,
   HeadingTwoElement,
   ItalicLeaf,
+  ParagraphElement,
   UndelineLeaf,
 } from "./components";
 import { defaultValue } from "./defaultValue";
@@ -32,14 +35,26 @@ export function SOLEditor() {
 
   const editor = usePlateEditor({
     plugins: [
+      ParagraphPlugin,
       HeadingPlugin,
       BlockquotePlugin,
       BoldPlugin,
       ItalicPlugin,
       UnderlinePlugin,
+      AlignPlugin.configure({
+        inject: {
+          targetPlugins: [
+            ParagraphPlugin.key,
+            HEADING_KEYS.h1,
+            HEADING_KEYS.h2,
+            HEADING_KEYS.h3,
+          ],
+        },
+      }),
     ],
     override: {
       components: {
+        [ParagraphPlugin.key]: ParagraphElement,
         [BoldPlugin.key]: BoldLeaf,
         [ItalicPlugin.key]: ItalicLeaf,
         [UnderlinePlugin.key]: UndelineLeaf,
@@ -53,18 +68,20 @@ export function SOLEditor() {
   });
 
   return (
-    <Plate
-      editor={editor}
-      onChange={({ value }) => {
-        setDebugValue(value);
-      }}
-    >
-      <Toolbar />
-      <PlateContent placeholder="Type..." />
-      <Divider my="10" />
-      <pre style={{ fontSize: "10px" }}>
-        {JSON.stringify(debugValue, null, 2)}
-      </pre>
-    </Plate>
+    <Box bg="white" px="6">
+      <Plate
+        editor={editor}
+        onChange={({ value }) => {
+          setDebugValue(value);
+        }}
+      >
+        <Toolbar />
+        <Box as={PlateContent} placeholder="Type..." p="1" />
+        <Divider my="10" />
+        <pre style={{ fontSize: "10px" }}>
+          {JSON.stringify(debugValue, null, 2)}
+        </pre>
+      </Plate>
+    </Box>
   );
 }

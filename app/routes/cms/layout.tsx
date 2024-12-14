@@ -3,7 +3,7 @@ import { Outlet } from "react-router";
 
 export default function CMSLayout() {
   return (
-    <Box px="4">
+    <Box maxW="6xl" mx="auto" px="6">
       <Outlet />
     </Box>
   );

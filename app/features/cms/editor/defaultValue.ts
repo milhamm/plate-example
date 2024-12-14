@@ -8,6 +8,7 @@ export const defaultValue: Value = [
         text: "Example Title",
       },
     ],
+    align: "center",
   },
   {
     type: "p",
@@ -38,14 +39,7 @@ export const defaultValue: Value = [
         text: ", just like a <textarea>!",
       },
     ],
-  },
-  {
-    type: "p",
-    children: [
-      {
-        text: "",
-      },
-    ],
+    align: "left",
   },
   {
     type: "blockquote",

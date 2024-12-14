@@ -11,6 +11,7 @@ specifiers:
   '@types/react': ^19.0.1
   '@types/react-dom': ^19.0.1
   '@udecode/cn': ^40.2.8
+  '@udecode/plate-alignment': ^40.0.0
   '@udecode/plate-basic-marks': ^40.0.0
   '@udecode/plate-block-quote': ^40.0.0
   '@udecode/plate-common': ^40.3.1
@@ -38,6 +39,7 @@ dependencies:
   '@react-router/node': 7.0.2_3ucyd4pq5ac6heptavxkjzgxaq
   '@react-router/serve': 7.0.2_3ucyd4pq5ac6heptavxkjzgxaq
   '@udecode/cn': 40.2.8_tgjvtmnyxhubohucp2ie2nyp6a
+  '@udecode/plate-alignment': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   '@udecode/plate-basic-marks': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   '@udecode/plate-block-quote': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   '@udecode/plate-common': 40.3.1_okbi7ede2eszwqscl7fpzoxl3e
@@ -1224,6 +1226,28 @@ packages:
       react-dom: 19.0.0_react@19.0.0
     transitivePeerDependencies:
       - '@types/react'
+    dev: false
+
+  /@udecode/plate-alignment/40.0.0_7abxhywuiflqjqbfcc2jqiboie:
+    resolution: {integrity: sha512-KtRSNr20XDyOqCORwsYFeuwLm4/JGy9Z9U49L/Ph9bxp6rz3iNpikKSDkEtpr1n6BKXQPLd/biu3cbJKSST8eg==}
+    peerDependencies:
+      '@udecode/plate-common': '>=40.0.0'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      slate: '>=0.103.0'
+      slate-dom: '>=0.111.0'
+      slate-history: '>=0.93.0'
+      slate-hyperscript: '>=0.66.0'
+      slate-react: '>=0.111.0'
+    dependencies:
+      '@udecode/plate-common': 40.3.1_okbi7ede2eszwqscl7fpzoxl3e
+      react: 19.0.0
+      react-dom: 19.0.0_react@19.0.0
+      slate: 0.112.0
+      slate-dom: 0.111.0_slate@0.112.0
+      slate-history: 0.110.3_slate@0.112.0
+      slate-hyperscript: 0.100.0_slate@0.112.0
+      slate-react: 0.112.0_2cp2m6l7n5i3x2brf4hdjr334a
     dev: false
 
   /@udecode/plate-basic-marks/40.0.0_7abxhywuiflqjqbfcc2jqiboie:
