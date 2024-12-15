@@ -10,6 +10,8 @@ import {
   Heading2Icon,
   Heading3Icon,
   ItalicIcon,
+  ListIcon,
+  ListOrderedIcon,
   PilcrowIcon,
   UnderlineIcon,
 } from "lucide-react";
@@ -22,6 +24,11 @@ import { BlockButton } from "./block-button";
 import { HEADING_KEYS } from "@udecode/plate-heading";
 import { ParagraphPlugin } from "@udecode/plate-common/react";
 import { AlignButton } from "./align-button";
+import { ListButton } from "./list-button";
+import {
+  BulletedListPlugin,
+  NumberedListPlugin,
+} from "@udecode/plate-list/react";
 
 export function Toolbar() {
   return (
@@ -49,6 +56,12 @@ export function Toolbar() {
         <AlignButton alignType="center" icon={<AlignCenterIcon />} />
         <AlignButton alignType="right" icon={<AlignRightIcon />} />
         <AlignButton alignType="justify" icon={<AlignJustifyIcon />} />
+        <Divider mx="1" orientation="vertical" />
+        <ListButton listType={BulletedListPlugin.key} icon={<ListIcon />} />
+        <ListButton
+          listType={NumberedListPlugin.key}
+          icon={<ListOrderedIcon />}
+        />
       </Flex>
     </Flex>
   );

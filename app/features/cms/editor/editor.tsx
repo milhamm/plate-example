@@ -14,6 +14,13 @@ import { HEADING_KEYS } from "@udecode/plate-heading";
 import { HeadingPlugin } from "@udecode/plate-heading/react";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
 import { AlignPlugin } from "@udecode/plate-alignment/react";
+import {
+  BulletedListPlugin,
+  ListItemContentPlugin,
+  ListItemPlugin,
+  ListPlugin,
+  NumberedListPlugin,
+} from "@udecode/plate-list/react";
 import { Box, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -24,11 +31,15 @@ import {
   HeadingThreeElement,
   HeadingTwoElement,
   ItalicLeaf,
+  ListElement,
+  ListItemElement,
   ParagraphElement,
   UndelineLeaf,
+  UnorderedListElement,
 } from "./components";
 import { defaultValue } from "./defaultValue";
 import { Toolbar } from "./components/toolbar";
+import { autoformatListPlugin } from "./plugins";
 
 export function SOLEditor() {
   const [debugValue, setDebugValue] = useState<Value>(defaultValue);
@@ -51,6 +62,8 @@ export function SOLEditor() {
           ],
         },
       }),
+      ListPlugin,
+      autoformatListPlugin,
     ],
     override: {
       components: {
@@ -62,6 +75,10 @@ export function SOLEditor() {
         [HEADING_KEYS.h1]: HeadingOneElement,
         [HEADING_KEYS.h2]: HeadingTwoElement,
         [HEADING_KEYS.h3]: HeadingThreeElement,
+        [BulletedListPlugin.key]: UnorderedListElement,
+        [NumberedListPlugin.key]: ListElement,
+        [ListItemPlugin.key]: ListItemElement,
+        [ListItemContentPlugin.key]: ParagraphElement,
       },
     },
     value: defaultValue,

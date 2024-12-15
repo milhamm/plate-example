@@ -12,10 +12,12 @@ specifiers:
   '@types/react-dom': ^19.0.1
   '@udecode/cn': ^40.2.8
   '@udecode/plate-alignment': ^40.0.0
+  '@udecode/plate-autoformat': ^40.0.0
   '@udecode/plate-basic-marks': ^40.0.0
   '@udecode/plate-block-quote': ^40.0.0
   '@udecode/plate-common': ^40.3.1
   '@udecode/plate-heading': ^40.2.6
+  '@udecode/plate-list': ^40.0.0
   cross-env: ^7.0.3
   framer-motion: ^11.14.3
   isbot: ^5.1.17
@@ -40,10 +42,12 @@ dependencies:
   '@react-router/serve': 7.0.2_3ucyd4pq5ac6heptavxkjzgxaq
   '@udecode/cn': 40.2.8_tgjvtmnyxhubohucp2ie2nyp6a
   '@udecode/plate-alignment': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
+  '@udecode/plate-autoformat': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   '@udecode/plate-basic-marks': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   '@udecode/plate-block-quote': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   '@udecode/plate-common': 40.3.1_okbi7ede2eszwqscl7fpzoxl3e
   '@udecode/plate-heading': 40.2.6_7abxhywuiflqjqbfcc2jqiboie
+  '@udecode/plate-list': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
   framer-motion: 11.14.3_upmzqgzhjrquwzo2dphtigtdgi
   isbot: 5.1.17
   lucide-react: 0.468.0_react@19.0.0
@@ -1250,6 +1254,29 @@ packages:
       slate-react: 0.112.0_2cp2m6l7n5i3x2brf4hdjr334a
     dev: false
 
+  /@udecode/plate-autoformat/40.0.0_7abxhywuiflqjqbfcc2jqiboie:
+    resolution: {integrity: sha512-jZN1gcS2F8zWPRM3d3M4uiMYB+t28e+1hr0RQIsd4ddcqw/F1rQUkOfIW4mPeLrul1iuRYDBB8/siUH0moNzrw==}
+    peerDependencies:
+      '@udecode/plate-common': '>=40.0.0'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      slate: '>=0.103.0'
+      slate-dom: '>=0.111.0'
+      slate-history: '>=0.93.0'
+      slate-hyperscript: '>=0.66.0'
+      slate-react: '>=0.111.0'
+    dependencies:
+      '@udecode/plate-common': 40.3.1_okbi7ede2eszwqscl7fpzoxl3e
+      lodash: 4.17.21
+      react: 19.0.0
+      react-dom: 19.0.0_react@19.0.0
+      slate: 0.112.0
+      slate-dom: 0.111.0_slate@0.112.0
+      slate-history: 0.110.3_slate@0.112.0
+      slate-hyperscript: 0.100.0_slate@0.112.0
+      slate-react: 0.112.0_2cp2m6l7n5i3x2brf4hdjr334a
+    dev: false
+
   /@udecode/plate-basic-marks/40.0.0_7abxhywuiflqjqbfcc2jqiboie:
     resolution: {integrity: sha512-Rmt80S5NRhZWNi9CLZMH3Q7zH4sGHPOFSvxI0rKl+I0ZccvNgsaH2cOmQGKCz+kKIMCH9oro0D4kzz62VRN/3g==}
     peerDependencies:
@@ -1373,6 +1400,52 @@ packages:
     resolution: {integrity: sha512-6OdRbYOtHXvocfTQBvIOCZD1nnnHfkojLzGY4j1M2qwtnCLvI8Wl8ZvZpYyd6/ZunDxK4xCGVE82pN3rui8s/A==}
     peerDependencies:
       '@udecode/plate-common': '>=40.0.3'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      slate: '>=0.103.0'
+      slate-dom: '>=0.111.0'
+      slate-history: '>=0.93.0'
+      slate-hyperscript: '>=0.66.0'
+      slate-react: '>=0.111.0'
+    dependencies:
+      '@udecode/plate-common': 40.3.1_okbi7ede2eszwqscl7fpzoxl3e
+      react: 19.0.0
+      react-dom: 19.0.0_react@19.0.0
+      slate: 0.112.0
+      slate-dom: 0.111.0_slate@0.112.0
+      slate-history: 0.110.3_slate@0.112.0
+      slate-hyperscript: 0.100.0_slate@0.112.0
+      slate-react: 0.112.0_2cp2m6l7n5i3x2brf4hdjr334a
+    dev: false
+
+  /@udecode/plate-list/40.0.0_7abxhywuiflqjqbfcc2jqiboie:
+    resolution: {integrity: sha512-n+I1oMFLrAE/cgFIcjUXOTjCIj6AO14FkoRoHXvUalMJQl8yhLAf9WUHcmPTNTWwsDmH0nsmH99rtuTrFvunbg==}
+    peerDependencies:
+      '@udecode/plate-common': '>=40.0.0'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      slate: '>=0.103.0'
+      slate-dom: '>=0.111.0'
+      slate-history: '>=0.93.0'
+      slate-hyperscript: '>=0.66.0'
+      slate-react: '>=0.111.0'
+    dependencies:
+      '@udecode/plate-common': 40.3.1_okbi7ede2eszwqscl7fpzoxl3e
+      '@udecode/plate-reset-node': 40.0.0_7abxhywuiflqjqbfcc2jqiboie
+      lodash: 4.17.21
+      react: 19.0.0
+      react-dom: 19.0.0_react@19.0.0
+      slate: 0.112.0
+      slate-dom: 0.111.0_slate@0.112.0
+      slate-history: 0.110.3_slate@0.112.0
+      slate-hyperscript: 0.100.0_slate@0.112.0
+      slate-react: 0.112.0_2cp2m6l7n5i3x2brf4hdjr334a
+    dev: false
+
+  /@udecode/plate-reset-node/40.0.0_7abxhywuiflqjqbfcc2jqiboie:
+    resolution: {integrity: sha512-U5tFHLkPOZvLWuAmfXHqELQTJiZ37FmKMDrVF0jPepMGzgGLLje49a/d86LdIMsAvM6bBtI2a6Pd0RzGA0WbMg==}
+    peerDependencies:
+      '@udecode/plate-common': '>=40.0.0'
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
       slate: '>=0.103.0'

@@ -29,7 +29,7 @@ export const HeadingThreeElement = withRef<typeof PlateElement>(
   ({ children, className, ...props }, ref) => {
     return (
       <PlateElement asChild ref={ref} {...props}>
-        <Heading as="h2" size="md">
+        <Heading as="h3" size="md">
           {children}
         </Heading>
       </PlateElement>
