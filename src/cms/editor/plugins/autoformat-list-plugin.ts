@@ -6,7 +6,6 @@ import { AutoformatPlugin } from "@udecode/plate-autoformat/react";
 import {
   getParentNode,
   isElement,
-  isType,
   type SlateEditor,
 } from "@udecode/plate-common";
 import { toggleList, unwrapList } from "@udecode/plate-list";

@@ -4,7 +4,7 @@ import { withRef, PlateElement } from "@udecode/plate-common/react";
 const PlateElementChakra = chakra(PlateElement);
 
 export const ListElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElementChakra
         asChild
@@ -20,7 +20,7 @@ export const ListElement = withRef<typeof PlateElement>(
 );
 
 export const UnorderedListElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElementChakra asChild ref={ref} marginInlineStart="1em" {...props}>
         <ul>{children}</ul>
@@ -30,7 +30,7 @@ export const UnorderedListElement = withRef<typeof PlateElement>(
 );
 
 export const ListItemElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElementChakra asChild ref={ref} {...props}>
         <li>{children}</li>

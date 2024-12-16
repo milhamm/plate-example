@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { withRef, PlateElement } from "@udecode/plate-common/react";
 
 export const BlockquoteElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElement asChild ref={ref} {...props}>
         <Box

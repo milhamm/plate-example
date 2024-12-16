@@ -2,7 +2,7 @@ import { Heading } from "@chakra-ui/react";
 import { withRef, PlateElement } from "@udecode/plate-common/react";
 
 export const HeadingOneElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElement asChild ref={ref} {...props}>
         <Heading as="h1" size="xl">
@@ -14,7 +14,7 @@ export const HeadingOneElement = withRef<typeof PlateElement>(
 );
 
 export const HeadingTwoElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElement asChild ref={ref} {...props}>
         <Heading as="h2" size="lg">
@@ -26,7 +26,7 @@ export const HeadingTwoElement = withRef<typeof PlateElement>(
 );
 
 export const HeadingThreeElement = withRef<typeof PlateElement>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateElement asChild ref={ref} {...props}>
         <Heading as="h3" size="md">

@@ -1,7 +1,7 @@
 import { withRef, PlateLeaf } from "@udecode/plate-common/react";
 
 export const BoldLeaf = withRef<typeof PlateLeaf>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateLeaf asChild ref={ref} {...props}>
         <strong>{children}</strong>
@@ -11,7 +11,7 @@ export const BoldLeaf = withRef<typeof PlateLeaf>(
 );
 
 export const ItalicLeaf = withRef<typeof PlateLeaf>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateLeaf asChild ref={ref} {...props}>
         <em>{children}</em>
@@ -21,7 +21,7 @@ export const ItalicLeaf = withRef<typeof PlateLeaf>(
 );
 
 export const UndelineLeaf = withRef<typeof PlateLeaf>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateLeaf asChild ref={ref} {...props}>
         <u>{children}</u>
@@ -31,7 +31,7 @@ export const UndelineLeaf = withRef<typeof PlateLeaf>(
 );
 
 export const BlockquoteLeaf = withRef<typeof PlateLeaf>(
-  ({ children, className, ...props }, ref) => {
+  ({ children, ...props }, ref) => {
     return (
       <PlateLeaf asChild ref={ref} {...props}>
         <blockquote>{children}</blockquote>
