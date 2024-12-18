@@ -118,28 +118,18 @@ export const defaultValue: Value = [
     ],
   },
   {
-    type: "p",
-    align: "right",
-    children: [
-      {
-        text: "",
-        italic: true,
-      },
-    ],
-  },
-  {
     type: "blockquote",
     children: [
       {
-        text: "const sum = (a, b) => a + b",
+        text: "Ini adalah quote",
       },
     ],
   },
   {
-    type: "p",
+    type: "tips",
     children: [
       {
-        text: "",
+        text: "Gunakan saringan rapat untuk hasil maksimal",
       },
     ],
   },

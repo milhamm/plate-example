@@ -10,8 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "@chakra-ui/react": "2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -22,11 +20,14 @@
     "@udecode/plate-autoformat": "^40.0.0",
     "@udecode/plate-basic-marks": "^40.0.0",
     "@udecode/plate-block-quote": "^40.0.0",
+    "@udecode/plate-break": "^40.0.0",
     "@udecode/plate-common": "^40.3.1",
     "@udecode/plate-heading": "^40.2.6",
     "@udecode/plate-list": "^40.0.0",
     "framer-motion": "^11.14.3",
     "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "slate": "^0.112.0",
     "slate-dom": "^0.111.0",
     "slate-history": "^0.110.3",

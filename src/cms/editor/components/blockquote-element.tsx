@@ -1,20 +1,22 @@
-import { Box } from "@chakra-ui/react";
+import { chakra } from "@chakra-ui/react";
 import { withRef, PlateElement } from "@udecode/plate-common/react";
+
+const PlateElementChakra = chakra(PlateElement);
 
 export const BlockquoteElement = withRef<typeof PlateElement>(
   ({ children, ...props }, ref) => {
     return (
-      <PlateElement asChild ref={ref} {...props}>
-        <Box
-          as="blockquote"
-          bg="gray.100"
-          fontFamily="monospace"
-          p="2"
-          rounded="lg"
-        >
-          {children}
-        </Box>
-      </PlateElement>
+      <PlateElementChakra
+        asChild
+        ref={ref}
+        my="1"
+        borderLeft="2px"
+        borderLeftColor="gray"
+        paddingLeft="6"
+        {...props}
+      >
+        <blockquote>{children}</blockquote>
+      </PlateElementChakra>
     );
   }
 );

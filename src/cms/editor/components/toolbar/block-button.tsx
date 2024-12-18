@@ -32,7 +32,7 @@ export const BlockButton = withRef<typeof Button, BlockButtonProps>(
 
     return (
       <Button
-        w="30px"
+        w={typeof icon !== "string" ? "30px" : "auto"}
         size="sm"
         px="2"
         variant={pressed ? "solid" : "outline"}

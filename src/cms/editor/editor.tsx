@@ -14,6 +14,7 @@ import { HEADING_KEYS } from "@udecode/plate-heading";
 import { HeadingPlugin } from "@udecode/plate-heading/react";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
 import { AlignPlugin } from "@udecode/plate-alignment/react";
+import { ExitBreakPlugin, SoftBreakPlugin } from "@udecode/plate-break/react";
 import {
   BulletedListPlugin,
   ListItemContentPlugin,
@@ -40,6 +41,8 @@ import {
 import { defaultValue } from "./defaultValue";
 import { Toolbar } from "./components/toolbar";
 import { autoformatListPlugin } from "./plugins";
+import { TipsPlugin } from "./plugins/tips-plugin";
+import { TipsElement } from "./components/tips-element";
 
 export function SOLEditor() {
   const [debugValue, setDebugValue] = useState<Value>(defaultValue);
@@ -62,8 +65,45 @@ export function SOLEditor() {
           ],
         },
       }),
-      ListPlugin,
+      ListPlugin.configure({
+        options: {
+          validLiChildrenTypes: [
+            ParagraphPlugin.key,
+            NumberedListPlugin.key,
+            BulletedListPlugin.key,
+            TipsPlugin.key,
+            BlockquotePlugin.key,
+          ],
+        },
+      }),
+      TipsPlugin,
       autoformatListPlugin,
+      SoftBreakPlugin.configure({
+        options: {
+          rules: [
+            { hotkey: "shift+enter" },
+            {
+              hotkey: "enter",
+              query: {
+                allow: [BlockquotePlugin.key, TipsPlugin.key],
+              },
+            },
+          ],
+        },
+      }),
+      ExitBreakPlugin.configure({
+        options: {
+          rules: [
+            {
+              hotkey: "mod+enter",
+            },
+            {
+              before: true,
+              hotkey: "mod+shift+enter",
+            },
+          ],
+        },
+      }),
     ],
     override: {
       components: {
@@ -79,6 +119,7 @@ export function SOLEditor() {
         [NumberedListPlugin.key]: ListElement,
         [ListItemPlugin.key]: ListItemElement,
         [ListItemContentPlugin.key]: ParagraphElement,
+        [TipsPlugin.key]: TipsElement,
       },
     },
     value: defaultValue,
