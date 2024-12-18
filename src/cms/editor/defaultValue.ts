@@ -52,96 +52,68 @@ export const defaultValue: Value = [
             align: "left",
             children: [
               {
-                text: "First ",
+                text: "Persiapan pertama",
+                bold: true,
+              },
+            ],
+          },
+          {
+            type: "lic",
+            align: "left",
+            children: [
+              {
+                text: "Campurkan puree stroberi Boiron dengan air dan gula, lalu rebus. Tuang campuran puree ke dalam cetakan es batu.",
+              },
+            ],
+          },
+          {
+            type: "lic",
+            align: "left",
+            children: [
+              {
+                text: "",
+              },
+            ],
+          },
+          {
+            type: "lic",
+            align: "left",
+            children: [
+              {
+                text: "Ulangi prosesnya dengan puree lainnya dan tuang ke cetakan es batu. Bekukan semalaman.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: "li",
+        children: [
+          {
+            type: "lic",
+            children: [
+              {
+                text: "Campurkan bahan",
+                bold: true,
+              },
+            ],
+          },
+          {
+            type: "lic",
+            children: [
+              {
+                text: "Seduh lipton ",
               },
               {
-                text: "Item",
+                text: "Yellow Tea",
                 italic: true,
               },
-            ],
-          },
-          {
-            type: "ol",
-            children: [
               {
-                type: "li",
-                children: [
-                  {
-                    type: "lic",
-                    children: [
-                      {
-                        text: "Nested Item",
-                        bold: true,
-                        underline: true,
-                      },
-                    ],
-                  },
-                ],
+                text: " dengan 300ml air mendidih, lalu sisihkan. Ikuti langkah sesuai resep di atas. Selamat mencoba!",
               },
             ],
           },
         ],
-      },
-      {
-        type: "li",
-        children: [
-          {
-            type: "lic",
-            children: [
-              {
-                text: "Second Item",
-              },
-            ],
-          },
-          {
-            type: "lic",
-            children: [
-              {
-                text: "Ini adalah Shift+Enter",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    children: [
-      {
-        children: [
-          {
-            children: [
-              {
-                text: "First",
-              },
-            ],
-            type: "lic",
-          },
-        ],
-        type: "li",
-      },
-      {
-        children: [
-          {
-            children: [
-              {
-                text: "Second",
-              },
-            ],
-            type: "lic",
-          },
-        ],
-        type: "li",
-      },
-    ],
-    type: "ul",
-  },
-  {
-    type: "p",
-    align: "right",
-    children: [
-      {
-        text: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم",
       },
     ],
   },
@@ -150,7 +122,7 @@ export const defaultValue: Value = [
     align: "right",
     children: [
       {
-        text: "Bismillahirrahmanirrahim",
+        text: "",
         italic: true,
       },
     ],
