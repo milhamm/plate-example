@@ -134,11 +134,13 @@ export function SOLEditor() {
         }}
       >
         <Toolbar />
-        <Box as={PlateContent} placeholder="Type..." p="1" />
-        <Divider my="10" />
-        <pre style={{ fontSize: "10px" }}>
-          {JSON.stringify(debugValue, null, 2)}
-        </pre>
+        <Box maxW="2xl" mx="auto" px="6">
+          <Box as={PlateContent} placeholder="Type..." p="1" />
+          <Divider my="10" />
+          <pre style={{ fontSize: "10px" }}>
+            {JSON.stringify(debugValue, null, 2)}
+          </pre>
+        </Box>
       </Plate>
     </Box>
   );

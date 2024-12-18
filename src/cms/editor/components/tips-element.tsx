@@ -11,6 +11,7 @@ export const TipsElement = withRef<typeof PlateElement>(
         ref={ref}
         px="4"
         py="1"
+        my="4"
         rounded="md"
         data-tips
         display="flex"
