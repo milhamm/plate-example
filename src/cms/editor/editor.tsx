@@ -37,12 +37,14 @@ import {
   ParagraphElement,
   UndelineLeaf,
   UnorderedListElement,
-} from "./components";
-import { defaultValue } from "./defaultValue";
-import { Toolbar } from "./components/toolbar";
-import { autoformatListPlugin } from "./plugins";
-import { TipsPlugin } from "./plugins/tips-plugin";
-import { TipsElement } from "./components/tips-element";
+} from './components';
+import { defaultValue } from './defaultValue';
+import { Toolbar } from './components/toolbar';
+import { autoformatListPlugin } from './plugins';
+import { ImagePlugin } from '@udecode/plate-media/react';
+import { TipsPlugin } from './plugins/tips-plugin';
+import { TipsElement } from './components/tips-element';
+import { ImageElement } from './components/image-element';
 
 export function SOLEditor() {
   const [debugValue, setDebugValue] = useState<Value>(defaultValue);
@@ -73,6 +75,7 @@ export function SOLEditor() {
             BulletedListPlugin.key,
             TipsPlugin.key,
             BlockquotePlugin.key,
+            ImagePlugin.key,
           ],
         },
       }),
@@ -81,9 +84,9 @@ export function SOLEditor() {
       SoftBreakPlugin.configure({
         options: {
           rules: [
-            { hotkey: "shift+enter" },
+            { hotkey: 'shift+enter' },
             {
-              hotkey: "enter",
+              hotkey: 'enter',
               query: {
                 allow: [BlockquotePlugin.key, TipsPlugin.key],
               },
@@ -95,15 +98,16 @@ export function SOLEditor() {
         options: {
           rules: [
             {
-              hotkey: "mod+enter",
+              hotkey: 'mod+enter',
             },
             {
               before: true,
-              hotkey: "mod+shift+enter",
+              hotkey: 'mod+shift+enter',
             },
           ],
         },
       }),
+      ImagePlugin,
     ],
     override: {
       components: {
@@ -120,6 +124,7 @@ export function SOLEditor() {
         [ListItemPlugin.key]: ListItemElement,
         [ListItemContentPlugin.key]: ParagraphElement,
         [TipsPlugin.key]: TipsElement,
+        [ImagePlugin.key]: ImageElement,
       },
     },
     value: defaultValue,
@@ -137,7 +142,7 @@ export function SOLEditor() {
         <Box maxW="2xl" mx="auto" px="6">
           <Box as={PlateContent} placeholder="Type..." p="1" />
           <Divider my="10" />
-          <pre style={{ fontSize: "10px" }}>
+          <pre style={{ fontSize: '10px' }}>
             {JSON.stringify(debugValue, null, 2)}
           </pre>
         </Box>
