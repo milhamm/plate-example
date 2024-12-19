@@ -14,7 +14,7 @@ import {
   ListOrderedIcon,
   PilcrowIcon,
   UnderlineIcon,
-} from "lucide-react";
+} from 'lucide-react';
 import {
   BoldPlugin,
   ItalicPlugin,
@@ -52,7 +52,7 @@ export function Toolbar() {
         <BlockButton blockType={HEADING_KEYS.h2} icon={<Heading2Icon />} />
         <BlockButton blockType={HEADING_KEYS.h3} icon={<Heading3Icon />} />
         <BlockButton blockType={ParagraphPlugin.key} icon={<PilcrowIcon />} />
-        <BlockButton blockType={TipsPlugin.key} icon={"Insert Tips"} />
+        <BlockButton blockType={TipsPlugin.key} icon={'Insert Tips'} />
         <Divider mx="1" orientation="vertical" />
         <AlignButton alignType="left" icon={<AlignLeftIcon />} />
         <AlignButton alignType="center" icon={<AlignCenterIcon />} />
