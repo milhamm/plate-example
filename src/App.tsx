@@ -1,4 +1,4 @@
-import { CMSPage } from "./cms";
+import { CMSPage } from './cms';
 
 function App() {
   return <CMSPage />;

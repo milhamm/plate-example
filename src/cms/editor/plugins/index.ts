@@ -1,1 +1,1 @@
-export * from "./autoformat-list-plugin";
+export * from './autoformat-list-plugin';

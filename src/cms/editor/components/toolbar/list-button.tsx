@@ -1,9 +1,9 @@
-import { Button } from "@chakra-ui/react";
-import { withRef } from "@udecode/plate-common/react";
+import { Button } from '@chakra-ui/react';
+import { withRef } from '@udecode/plate-common/react';
 import {
   useListToolbarButton,
   useListToolbarButtonState,
-} from "@udecode/plate-list/react";
+} from '@udecode/plate-list/react';
 
 type ListButtonProps = {
   listType: string;
@@ -22,7 +22,7 @@ export const ListButton = withRef<typeof Button, ListButtonProps>(
         w="30px"
         size="sm"
         px="2"
-        variant={pressed ? "solid" : "outline"}
+        variant={pressed ? 'solid' : 'outline'}
         ref={ref}
         {...props}
         {...rest}
@@ -30,5 +30,5 @@ export const ListButton = withRef<typeof Button, ListButtonProps>(
         {icon}
       </Button>
     );
-  }
+  },
 );

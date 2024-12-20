@@ -1,13 +1,13 @@
-import { Button } from "@chakra-ui/react";
+import { Button } from '@chakra-ui/react';
 import {
   focusEditor,
   ParagraphPlugin,
   useEditorRef,
   useSelectionFragmentProp,
   withRef,
-} from "@udecode/plate-common/react";
+} from '@udecode/plate-common/react';
 
-import { getBlockType, setBlockType } from "../../transforms";
+import { getBlockType, setBlockType } from '../../transforms';
 
 type BlockButtonProps = {
   blockType: string;
@@ -32,10 +32,10 @@ export const BlockButton = withRef<typeof Button, BlockButtonProps>(
 
     return (
       <Button
-        w={typeof icon !== "string" ? "30px" : "auto"}
+        w={typeof icon !== 'string' ? '30px' : 'auto'}
         size="sm"
         px="2"
-        variant={pressed ? "solid" : "outline"}
+        variant={pressed ? 'solid' : 'outline'}
         ref={ref}
         onClick={handleClick}
         {...rest}
@@ -43,5 +43,5 @@ export const BlockButton = withRef<typeof Button, BlockButtonProps>(
         {icon}
       </Button>
     );
-  }
+  },
 );

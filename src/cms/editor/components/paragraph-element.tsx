@@ -1,5 +1,5 @@
-import { Text } from "@chakra-ui/react";
-import { withRef, PlateElement } from "@udecode/plate-common/react";
+import { Text } from '@chakra-ui/react';
+import { withRef, PlateElement } from '@udecode/plate-common/react';
 
 export const ParagraphElement = withRef<typeof PlateElement>(
   ({ children, ...props }, ref) => {
@@ -8,5 +8,5 @@ export const ParagraphElement = withRef<typeof PlateElement>(
         <Text>{children}</Text>
       </PlateElement>
     );
-  }
+  },
 );

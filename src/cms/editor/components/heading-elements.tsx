@@ -1,5 +1,5 @@
-import { Heading } from "@chakra-ui/react";
-import { withRef, PlateElement } from "@udecode/plate-common/react";
+import { Heading } from '@chakra-ui/react';
+import { withRef, PlateElement } from '@udecode/plate-common/react';
 
 export const HeadingOneElement = withRef<typeof PlateElement>(
   ({ children, ...props }, ref) => {
@@ -10,7 +10,7 @@ export const HeadingOneElement = withRef<typeof PlateElement>(
         </Heading>
       </PlateElement>
     );
-  }
+  },
 );
 
 export const HeadingTwoElement = withRef<typeof PlateElement>(
@@ -22,7 +22,7 @@ export const HeadingTwoElement = withRef<typeof PlateElement>(
         </Heading>
       </PlateElement>
     );
-  }
+  },
 );
 
 export const HeadingThreeElement = withRef<typeof PlateElement>(
@@ -34,5 +34,5 @@ export const HeadingThreeElement = withRef<typeof PlateElement>(
         </Heading>
       </PlateElement>
     );
-  }
+  },
 );

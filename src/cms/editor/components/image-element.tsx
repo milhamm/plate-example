@@ -64,5 +64,5 @@ export const ImageElement = withRef<typeof PlateElement>(
         {children}
       </PlateElement>
     );
-  }
+  },
 );

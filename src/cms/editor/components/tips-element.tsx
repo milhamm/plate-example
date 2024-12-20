@@ -1,5 +1,5 @@
-import { Box, chakra } from "@chakra-ui/react";
-import { withRef, PlateElement } from "@udecode/plate-common/react";
+import { Box, chakra } from '@chakra-ui/react';
+import { withRef, PlateElement } from '@udecode/plate-common/react';
 
 const PlateElementChakra = chakra(PlateElement);
 
@@ -26,5 +26,5 @@ export const TipsElement = withRef<typeof PlateElement>(
         </blockquote>
       </PlateElementChakra>
     );
-  }
+  },
 );

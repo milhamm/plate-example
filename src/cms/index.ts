@@ -1,1 +1,1 @@
-export * from "./cms-page";
+export * from './cms-page';

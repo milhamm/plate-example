@@ -1,11 +1,11 @@
-import { Button } from "@chakra-ui/react";
-import { useAlignDropdownMenuState } from "@udecode/plate-alignment/react";
-import { setAlign, type Alignment } from "@udecode/plate-alignment";
+import { Button } from '@chakra-ui/react';
+import { useAlignDropdownMenuState } from '@udecode/plate-alignment/react';
+import { setAlign, type Alignment } from '@udecode/plate-alignment';
 import {
   focusEditor,
   useEditorRef,
   withRef,
-} from "@udecode/plate-common/react";
+} from '@udecode/plate-common/react';
 
 type AlignButtonProps = {
   alignType: Alignment;
@@ -29,7 +29,7 @@ export const AlignButton = withRef<typeof Button, AlignButtonProps>(
         w="30px"
         size="sm"
         px="2"
-        variant={pressed ? "solid" : "outline"}
+        variant={pressed ? 'solid' : 'outline'}
         onClick={handleClick}
         ref={ref}
         {...rest}
@@ -37,5 +37,5 @@ export const AlignButton = withRef<typeof Button, AlignButtonProps>(
         {icon}
       </Button>
     );
-  }
+  },
 );

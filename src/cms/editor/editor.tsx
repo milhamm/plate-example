@@ -3,27 +3,27 @@ import {
   Plate,
   PlateContent,
   ParagraphPlugin,
-} from "@udecode/plate-common/react";
-import type { Value } from "@udecode/plate-common";
+} from '@udecode/plate-common/react';
+import type { Value } from '@udecode/plate-common';
 import {
   BoldPlugin,
   ItalicPlugin,
   UnderlinePlugin,
-} from "@udecode/plate-basic-marks/react";
-import { HEADING_KEYS } from "@udecode/plate-heading";
-import { HeadingPlugin } from "@udecode/plate-heading/react";
-import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
-import { AlignPlugin } from "@udecode/plate-alignment/react";
-import { ExitBreakPlugin, SoftBreakPlugin } from "@udecode/plate-break/react";
+} from '@udecode/plate-basic-marks/react';
+import { HEADING_KEYS } from '@udecode/plate-heading';
+import { HeadingPlugin } from '@udecode/plate-heading/react';
+import { BlockquotePlugin } from '@udecode/plate-block-quote/react';
+import { AlignPlugin } from '@udecode/plate-alignment/react';
+import { ExitBreakPlugin, SoftBreakPlugin } from '@udecode/plate-break/react';
 import {
   BulletedListPlugin,
   ListItemContentPlugin,
   ListItemPlugin,
   ListPlugin,
   NumberedListPlugin,
-} from "@udecode/plate-list/react";
-import { Box, Divider } from "@chakra-ui/react";
-import { useState } from "react";
+} from '@udecode/plate-list/react';
+import { Box, Divider } from '@chakra-ui/react';
+import { useState } from 'react';
 
 import {
   BlockquoteElement,

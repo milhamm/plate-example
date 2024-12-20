@@ -1,5 +1,5 @@
-import { chakra } from "@chakra-ui/react";
-import { withRef, PlateElement } from "@udecode/plate-common/react";
+import { chakra } from '@chakra-ui/react';
+import { withRef, PlateElement } from '@udecode/plate-common/react';
 
 const PlateElementChakra = chakra(PlateElement);
 
@@ -13,34 +13,34 @@ export const ListElement = withRef<typeof PlateElement>(
         marginInlineStart={`calc(1.5em + ${size}px)`}
         listStyleType="none"
         sx={{
-          counterReset: "recipe",
-          "& li": {
-            counterIncrement: "recipe",
-            position: "relative",
-            margin: "0 0 0.5rem 0",
-            "&::before": {
+          counterReset: 'recipe',
+          '& li': {
+            counterIncrement: 'recipe',
+            position: 'relative',
+            margin: '0 0 0.5rem 0',
+            '&::before': {
               content: "''",
-              position: "absolute",
-              top: ".4rem",
+              position: 'absolute',
+              top: '.4rem',
               left: `calc(-1 * ${size}px - 20px)`,
               width: `${size}px`,
               height: `${size}px`,
-              background: "blue.500",
-              transform: "rotate(45deg)",
-              rounded: "md",
+              background: 'blue.500',
+              transform: 'rotate(45deg)',
+              rounded: 'md',
             },
-            "&::after": {
-              content: "counter(recipe)",
-              position: "absolute",
-              top: ".4rem",
-              textAlign: "center",
+            '&::after': {
+              content: 'counter(recipe)',
+              position: 'absolute',
+              top: '.4rem',
+              textAlign: 'center',
               left: `calc(-1 * ${size}px - 20px)`,
               width: `${size}px`,
               height: `${size}px`,
               lineHeight: `${size}px`,
-              color: "white",
-              fontWeight: "500",
-              fontSize: "xs",
+              color: 'white',
+              fontWeight: '500',
+              fontSize: 'xs',
             },
           },
         }}
@@ -49,7 +49,7 @@ export const ListElement = withRef<typeof PlateElement>(
         <ol>{children}</ol>
       </PlateElementChakra>
     );
-  }
+  },
 );
 
 export const UnorderedListElement = withRef<typeof PlateElement>(
@@ -59,7 +59,7 @@ export const UnorderedListElement = withRef<typeof PlateElement>(
         <ul>{children}</ul>
       </PlateElementChakra>
     );
-  }
+  },
 );
 
 export const ListItemElement = withRef<typeof PlateElement>(
@@ -69,5 +69,5 @@ export const ListItemElement = withRef<typeof PlateElement>(
         <li>{children}</li>
       </PlateElementChakra>
     );
-  }
+  },
 );

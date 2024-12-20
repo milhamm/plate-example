@@ -1,5 +1,5 @@
-import { Divider, Flex } from "@chakra-ui/react";
-import { MarkButton } from "./mark-button";
+import { Divider, Flex } from '@chakra-ui/react';
+import { MarkButton } from './mark-button';
 import {
   AlignCenterIcon,
   AlignJustifyIcon,
@@ -19,17 +19,17 @@ import {
   BoldPlugin,
   ItalicPlugin,
   UnderlinePlugin,
-} from "@udecode/plate-basic-marks/react";
-import { BlockButton } from "./block-button";
-import { HEADING_KEYS } from "@udecode/plate-heading";
-import { ParagraphPlugin } from "@udecode/plate-common/react";
-import { AlignButton } from "./align-button";
-import { ListButton } from "./list-button";
+} from '@udecode/plate-basic-marks/react';
+import { BlockButton } from './block-button';
+import { HEADING_KEYS } from '@udecode/plate-heading';
+import { ParagraphPlugin } from '@udecode/plate-common/react';
+import { AlignButton } from './align-button';
+import { ListButton } from './list-button';
 import {
   BulletedListPlugin,
   NumberedListPlugin,
-} from "@udecode/plate-list/react";
-import { TipsPlugin } from "../../plugins/tips-plugin";
+} from '@udecode/plate-list/react';
+import { TipsPlugin } from '../../plugins/tips-plugin';
 
 export function Toolbar() {
   return (

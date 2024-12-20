@@ -4,14 +4,14 @@ import {
   getBlocks,
   getNodeEntry,
   withoutNormalizing,
-} from "@udecode/plate-common";
-import type { PlateEditor } from "@udecode/plate-common/react";
-import { Path } from "slate";
+} from '@udecode/plate-common';
+import type { PlateEditor } from '@udecode/plate-common/react';
+import { Path } from 'slate';
 
 export const setBlockType = (
   editor: PlateEditor,
   type: string,
-  { at }: { at?: Path } = {}
+  { at }: { at?: Path } = {},
 ) => {
   withoutNormalizing(editor, () => {
     const setEntry = (entry: TNodeEntry<TElement>) => {

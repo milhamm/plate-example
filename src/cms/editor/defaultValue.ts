@@ -1,4 +1,4 @@
-import type { Value } from "@udecode/plate-common";
+import type { Value } from '@udecode/plate-common';
 
 export const defaultValue: Value = [
   {
