@@ -21,8 +21,10 @@ export const TipsElement = withRef<typeof PlateElement>(
         {...props}
       >
         <blockquote>
-          <Box fontWeight="bold">Tips:</Box>
-          {children}
+          <Box fontWeight="bold" contentEditable={false}>
+            Tips:
+          </Box>
+          <Box>{children}</Box>
         </blockquote>
       </PlateElementChakra>
     );

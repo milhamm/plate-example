@@ -4,8 +4,13 @@ import {
   getBlocks,
   getNodeEntry,
   withoutNormalizing,
+  insertNodes,
+  getBlockAbove,
+  removeEmptyPreviousBlock,
 } from '@udecode/plate-common';
 import type { PlateEditor } from '@udecode/plate-common/react';
+import { ImagePlugin } from '@udecode/plate-media/react';
+import { insertMedia } from '@udecode/plate-media';
 import { Path } from 'slate';
 
 export const setBlockType = (
@@ -40,4 +45,36 @@ export const setBlockType = (
 
 export const getBlockType = (block: TElement) => {
   return block.type;
+};
+
+const insertBlockMap: Record<
+  string,
+  (editor: PlateEditor, type: string) => void
+> = {
+  [ImagePlugin.key]: (editor) =>
+    insertMedia(editor, {
+      type: ImagePlugin.key,
+      select: true,
+    }),
+};
+
+export const insertBlock = (editor: PlateEditor, type: string) => {
+  withoutNormalizing(editor, () => {
+    if (type in insertBlockMap) {
+      insertBlockMap[type](editor, type);
+    } else {
+      const path = getBlockAbove(editor)?.[1];
+
+      if (!path) return;
+
+      const at = Path.next(path);
+
+      insertNodes(editor, editor.api.create.block({ type }), {
+        at,
+        select: true,
+      });
+    }
+
+    removeEmptyPreviousBlock(editor);
+  });
 };

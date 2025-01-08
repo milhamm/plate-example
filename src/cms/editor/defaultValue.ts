@@ -2,46 +2,6 @@ import type { Value } from '@udecode/plate-common';
 
 export const defaultValue: Value = [
   {
-    type: 'h1',
-    children: [
-      {
-        text: 'Example Title',
-      },
-    ],
-    align: 'center',
-  },
-  {
-    type: 'p',
-    children: [
-      {
-        text: 'This is ',
-      },
-      {
-        text: 'editable',
-        bold: true,
-      },
-      {
-        text: ' plain ',
-      },
-      {
-        text: 'text',
-        italic: true,
-      },
-      {
-        text: ' with react and history ',
-      },
-      {
-        text: 'plugins',
-        underline: true,
-        italic: true,
-      },
-      {
-        text: ', just like a <textarea>!',
-      },
-    ],
-    align: 'left',
-  },
-  {
     type: 'ol',
     children: [
       {
@@ -105,11 +65,24 @@ export const defaultValue: Value = [
                 text: 'Seduh lipton ',
               },
               {
+                type: 'img',
+                url: 'https://via.placeholder.com/150',
+                children: [{ text: '' }],
+              },
+              {
                 text: 'Yellow Tea',
                 italic: true,
               },
               {
                 text: ' dengan 300ml air mendidih, lalu sisihkan. Ikuti langkah sesuai resep di atas. Selamat mencoba!',
+              },
+              {
+                type: 'tips',
+                children: [
+                  {
+                    text: 'Gunakan saringan rapat untuk hasil maksimal',
+                  },
+                ],
               },
             ],
           },
@@ -134,8 +107,43 @@ export const defaultValue: Value = [
     ],
   },
   {
-    type: 'img',
-    url: 'https://via.placeholder.com/150',
-    children: [{ text: '' }],
+    type: 'h1',
+    children: [
+      {
+        text: 'Example Title',
+      },
+    ],
+    align: 'center',
+  },
+  {
+    type: 'p',
+    children: [
+      {
+        text: 'This is ',
+      },
+      {
+        text: 'editable',
+        bold: true,
+      },
+      {
+        text: ' plain ',
+      },
+      {
+        text: 'text',
+        italic: true,
+      },
+      {
+        text: ' with react and history ',
+      },
+      {
+        text: 'plugins',
+        underline: true,
+        italic: true,
+      },
+      {
+        text: ', just like a <textarea>!',
+      },
+    ],
+    align: 'left',
   },
 ];

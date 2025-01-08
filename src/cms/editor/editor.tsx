@@ -15,6 +15,7 @@ import { HeadingPlugin } from '@udecode/plate-heading/react';
 import { BlockquotePlugin } from '@udecode/plate-block-quote/react';
 import { AlignPlugin } from '@udecode/plate-alignment/react';
 import { ExitBreakPlugin, SoftBreakPlugin } from '@udecode/plate-break/react';
+import { TrailingBlockPlugin } from '@udecode/plate-trailing-block';
 import {
   BulletedListPlugin,
   ListItemContentPlugin,
@@ -34,6 +35,7 @@ import {
   ItalicLeaf,
   ListElement,
   ListItemElement,
+  MediaPlaceholderElement,
   ParagraphElement,
   UndelineLeaf,
   UnorderedListElement,
@@ -41,10 +43,11 @@ import {
 import { defaultValue } from './defaultValue';
 import { Toolbar } from './components/toolbar';
 import { autoformatListPlugin } from './plugins';
-import { ImagePlugin } from '@udecode/plate-media/react';
+import { ImagePlugin, PlaceholderPlugin } from '@udecode/plate-media/react';
 import { TipsPlugin } from './plugins/tips-plugin';
 import { TipsElement } from './components/tips-element';
 import { ImageElement } from './components/image-element';
+import { MediaUploadToast } from './components/media-upload-toast';
 
 export function SOLEditor() {
   const [debugValue, setDebugValue] = useState<Value>(defaultValue);
@@ -70,12 +73,9 @@ export function SOLEditor() {
       ListPlugin.configure({
         options: {
           validLiChildrenTypes: [
-            ParagraphPlugin.key,
-            NumberedListPlugin.key,
-            BulletedListPlugin.key,
             TipsPlugin.key,
-            BlockquotePlugin.key,
             ImagePlugin.key,
+            PlaceholderPlugin.key,
           ],
         },
       }),
@@ -108,6 +108,14 @@ export function SOLEditor() {
         },
       }),
       ImagePlugin,
+      PlaceholderPlugin.configure({
+        render: { afterEditable: MediaUploadToast },
+      }),
+      TrailingBlockPlugin.configure({
+        options: {
+          type: 'p',
+        },
+      }),
     ],
     override: {
       components: {
@@ -125,6 +133,7 @@ export function SOLEditor() {
         [ListItemContentPlugin.key]: ParagraphElement,
         [TipsPlugin.key]: TipsElement,
         [ImagePlugin.key]: ImageElement,
+        [PlaceholderPlugin.key]: MediaPlaceholderElement,
       },
     },
     value: defaultValue,

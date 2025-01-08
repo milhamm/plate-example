@@ -9,6 +9,7 @@ import {
   Heading1Icon,
   Heading2Icon,
   Heading3Icon,
+  ImageIcon,
   ItalicIcon,
   ListIcon,
   ListOrderedIcon,
@@ -29,7 +30,8 @@ import {
   BulletedListPlugin,
   NumberedListPlugin,
 } from '@udecode/plate-list/react';
-import { TipsPlugin } from '../../plugins/tips-plugin';
+import { ImageButton } from './image-button';
+import { TipsButton } from './tips-button';
 
 export function Toolbar() {
   return (
@@ -52,7 +54,9 @@ export function Toolbar() {
         <BlockButton blockType={HEADING_KEYS.h2} icon={<Heading2Icon />} />
         <BlockButton blockType={HEADING_KEYS.h3} icon={<Heading3Icon />} />
         <BlockButton blockType={ParagraphPlugin.key} icon={<PilcrowIcon />} />
-        <BlockButton blockType={TipsPlugin.key} icon={'Insert Tips'} />
+        <TipsButton icon={'Insert Tips'} />
+        <Divider mx="1" orientation="vertical" />
+        <ImageButton icon={<ImageIcon />} />
         <Divider mx="1" orientation="vertical" />
         <AlignButton alignType="left" icon={<AlignLeftIcon />} />
         <AlignButton alignType="center" icon={<AlignCenterIcon />} />

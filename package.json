@@ -27,6 +27,7 @@
     "@udecode/plate-heading": "^40.2.6",
     "@udecode/plate-list": "^40.0.0",
     "@udecode/plate-media": "^40.2.7",
+    "@udecode/plate-trailing-block": "^41.0.0",
     "framer-motion": "^11.14.3",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
@@ -35,7 +36,8 @@
     "slate-dom": "^0.111.0",
     "slate-history": "^0.110.3",
     "slate-hyperscript": "^0.100.0",
-    "slate-react": "^0.112.0"
+    "slate-react": "^0.112.0",
+    "use-file-picker": "^2.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
