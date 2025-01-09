@@ -22,7 +22,7 @@ const wait = async (ms: number) => new Promise((res) => setTimeout(res, ms));
 export function useUploadFile({
   onUploadComplete,
   onUploadError,
-  onUploadProgress,
+  // onUploadProgress,
 }: UseUploadFileProps = {}) {
   const [uploadedFile, setUploadedFile] = useState<UploadedFile>();
   const [uploadingFile, setUploadingFile] = useState<File>();

@@ -64,11 +64,7 @@ export const defaultValue: Value = [
               {
                 text: 'Seduh lipton ',
               },
-              {
-                type: 'img',
-                url: 'https://via.placeholder.com/150',
-                children: [{ text: '' }],
-              },
+
               {
                 text: 'Yellow Tea',
                 italic: true,
@@ -76,13 +72,18 @@ export const defaultValue: Value = [
               {
                 text: ' dengan 300ml air mendidih, lalu sisihkan. Ikuti langkah sesuai resep di atas. Selamat mencoba!',
               },
+            ],
+          },
+          {
+            type: 'img',
+            url: 'https://via.placeholder.com/150',
+            children: [{ text: '' }],
+          },
+          {
+            type: 'tips',
+            children: [
               {
-                type: 'tips',
-                children: [
-                  {
-                    text: 'Gunakan saringan rapat untuk hasil maksimal',
-                  },
-                ],
+                text: 'Gunakan saringan rapat untuk hasil maksimal',
               },
             ],
           },

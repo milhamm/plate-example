@@ -21,7 +21,7 @@ export const ListElement = withRef<typeof PlateElement>(
             '&::before': {
               content: "''",
               position: 'absolute',
-              top: '.4rem',
+              top: '.2rem',
               left: `calc(-1 * ${size}px - 20px)`,
               width: `${size}px`,
               height: `${size}px`,
@@ -32,7 +32,7 @@ export const ListElement = withRef<typeof PlateElement>(
             '&::after': {
               content: 'counter(recipe)',
               position: 'absolute',
-              top: '.4rem',
+              top: '.2rem',
               textAlign: 'center',
               left: `calc(-1 * ${size}px - 20px)`,
               width: `${size}px`,
