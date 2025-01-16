@@ -76,6 +76,9 @@ export const defaultValue: Value = [
           },
           {
             type: 'img',
+            name: '',
+            isUpload: true,
+            placeholderId: 'UjmV3XaC_3Ms28CCS6u0X',
             url: 'https://via.placeholder.com/150',
             children: [{ text: '' }],
           },
