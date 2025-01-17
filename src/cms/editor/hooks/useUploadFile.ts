@@ -36,7 +36,7 @@ export function useUploadFile({
     try {
       await wait(5000);
 
-      const fileUrl = 'https://via.placeholder.com/150';
+      const fileUrl = 'https://placehold.co/600x400/png';
       const fileKey = 'asd';
 
       // // Get presigned URL and final URL from your backend

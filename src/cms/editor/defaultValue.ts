@@ -79,7 +79,7 @@ export const defaultValue: Value = [
             name: '',
             isUpload: true,
             placeholderId: 'UjmV3XaC_3Ms28CCS6u0X',
-            url: 'https://via.placeholder.com/150',
+            url: 'https://placehold.co/600x400/png',
             children: [{ text: '' }],
           },
           {
